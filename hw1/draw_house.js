@@ -32,6 +32,7 @@ function drawScene() {
   }
 
   drawHouse(ctx, [SIZE * 0.34, SIZE * 0.8], SIZE * 0.4, properties);
+  drawRoad(ctx, [SIZE * 0.34, SIZE * 0.8], SIZE * 0.4);
 
   for (var index = 0; index < 4; index++) {
     drawCloud(ctx, 50 + Math.random() * 700, 100 + Math.random() * 200);
@@ -49,6 +50,21 @@ function drawCloud(ctx, x = 100, y = 200) {
   ctx.moveTo(x, y);
   ctx.bezierCurveTo(x, y + height, x + width, y + height, x + width, y);
   ctx.fill();
+}
+
+function drawRoad(ctx, location, scale) {
+  ctx.beginPath();
+  ctx.save();
+  ctx.translate(location[0], location[1]);
+  ctx.scale(scale, scale);
+
+  ctx.lineWidth = 0.2
+  ctx.strokeStyle = 'orange'
+  ctx.moveTo(0.2, 0);
+  ctx.quadraticCurveTo(0.1, 1.5, 10.0, -5.0);
+  ctx.stroke();
+
+  ctx.restore();
 }
 
 function drawBackground(ctx) {
