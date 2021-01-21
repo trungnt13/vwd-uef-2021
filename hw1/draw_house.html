@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 151, 255, 1) 100%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    canvas {
+      background: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vmin;
+      height: 80vmin;
+    }
+
+    #overlay {
+      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70vmin;
+      height: 70vmin;
+
+      padding: 1vmin;
+      margin: 0px;
+      color: white;
+      border-radius: 2vmin;
+
+      font-size: 3.3vmin;
+    }
+
+    a {
+      color: white;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+
+  <canvas id="myCanvas"></canvas>
+
+  <pre id="overlay" onclick="removeOverlay()">
+
+<b>Drawing on the Canvas:
+Little houses on the prairie</b>
+Some properties are random (refresh)
+
+<b>Vectors:</b> Math, geometrical shapes
+<b>Raster:</b> Pixels
+
+<b>Notes:</b>
+- CSS stretches the canvas
+- Canvas true size 1000 x 1000 (px)
+- Vector shapes become raster images
+
+<b>Studied methods:</b> beginPath, lineTo,
+moveTo, rect, fill, save, translate,
+scale, rotate, stroke, closePath,
+restore
+
+  </pre>
+
+  <script src="draw_house.js"></script>
+</body>
+
+</html>
