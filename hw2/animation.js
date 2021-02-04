@@ -131,7 +131,7 @@ class Square {
         this.mode = 4;
       }
     } else if (this.mode == 4) {
-      document.getElementById('overlay').style.visibility= 'visible';
+      document.getElementById('overlay').style.visibility = 'visible';
     } else {
       ctx.translate(this.x, this.y);
       ctx.strokeRect(0, 0, this.width, this.height);
