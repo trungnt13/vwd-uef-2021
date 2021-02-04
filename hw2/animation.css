@@ -1,0 +1,46 @@
+body{
+  padding:0px;
+  margin:0px;
+  background: rgb(80,80,80) ;
+  overflow: hidden;
+}
+canvas{
+  background:white;
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translate(-50%,-100%);
+  width:100vmax;
+  height:100vmax;
+}
+#overlay{
+  background:rgba(0,0,0,0.7);
+  position:absolute;
+  bottom:0px;
+  right:0px;
+
+  width:35vmin;
+  height:35vmin;
+
+  padding:1vmin;
+  margin:0px;
+  color: white;
+  border-radius:2vmin;
+
+  font-size:1.65vmin;
+}
+
+
+a{
+  color:white;
+}
+
+div{
+  position:absolute;
+  bottom:2vmin;
+  left:50%;
+  transform:translate(-50%,0);
+  font-size:4vmin;
+  font-family:"Arial";
+  color:gray;
+}
