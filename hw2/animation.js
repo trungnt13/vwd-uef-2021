@@ -23,7 +23,6 @@ function main() {
   animate();
   //setInterval(animate,100); // every 100 ms, 10 frames per second
   //setTimeout();// try this if interested
-
 }
 
 function animate() {
