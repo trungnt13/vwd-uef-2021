@@ -125,7 +125,8 @@ async function drawScene(ctx, effect) {
       const isSinging = lipsUp.sub(lipsLow).norm().dataSync();
       // console.log(`${isSinging}`);
       // play audio, this is hand tuned threshold
-      if (isSinging > 5) {
+      const threshold = 3.5;
+      if (isSinging > threshold) {
         if (AUDIO.state === 'suspended') {
           AUDIO.resume();
         }
@@ -136,7 +137,7 @@ async function drawScene(ctx, effect) {
         gainNode.gain.linearRampToValueAtTime(1, AUDIO.currentTime + 0.05);
         gainNode.gain.linearRampToValueAtTime(0, AUDIO.currentTime + duration);
         osc.type = "triangle";
-        osc.frequency.value = 150 + (isSinging - 5) * 20;
+        osc.frequency.value = 150 + (isSinging - threshold) * 20;
         osc.start(AUDIO.currentTime);
         osc.stop(AUDIO.currentTime + duration);
         osc.connect(gainNode);
