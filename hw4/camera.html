@@ -1,0 +1,24 @@
+<head>
+  <link rel="stylesheet" href="camera.css">
+</head>
+
+<body onload="main()">
+  <canvas id="myCanvas"></canvas>
+  <canvas id="myEffect"></canvas>
+
+  <div style="display: none;">
+    This code:
+    * detect face landmark
+    * draw it on screen
+    * locate your inner upper and lower lips
+    * calculate Euclidean distance
+    * then play music simulate your singing
+  </div>
+  <script src="camera.js"></script>
+  <!-- Require the peer dependencies of facemesh. -->
+  <script type="module" src="https://unpkg.com/@tensorflow/tfjs-core@2.4.0/dist/tf-core.js"></script>
+  <script type="module" src="https://unpkg.com/@tensorflow/tfjs-converter@2.4.0/dist/tf-converter.js"></script>
+  <script type="module" src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.4.0/dist/tf-backend-webgl.js"></script>
+  <script type="module"
+    src="https://unpkg.com/@tensorflow-models/face-landmarks-detection@0.0.1/dist/face-landmarks-detection.js"></script>
+</body>
